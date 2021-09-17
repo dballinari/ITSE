@@ -6,5 +6,5 @@ Each chapter of the course's script has a separate R-file with the codes used in
 The R examples use the package `astsa`. You can install the package by running the usual R-command: 
 
 ```r
-install.package("astsa")
+install.packages("astsa")
 ```

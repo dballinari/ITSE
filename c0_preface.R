@@ -28,6 +28,11 @@ gdp_data <- gdp
 # define an array of 60 random numbers and create a cumulative sum
 x <- cumsum(rnorm(n=60))
 # create a time series: add time information
-x_ts <- ts(data = x, c(2010, 1), end=c(2014, 12), frequency=12)
+x_ts <- ts(data = x, start=c(2010, 1), end=c(2014, 12), frequency=12)
 # plot the time series
 plot(x_ts, type="o")
+# add grid lines for better readability
+grid()
+
+# Get the data from the x_ts time series starting July 2012:
+window(x_ts, start=c(2012, 7))
