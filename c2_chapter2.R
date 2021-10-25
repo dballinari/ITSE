@@ -34,7 +34,7 @@ grid()
 
 # TIME SERIES WITH LINEAR TREND
 # For reproducibility:
-set.seed(123)
+set.seed(111)
 # Generate i.i.d. random variables:
 z <- rnorm(1000)
 # Generate the time series with a linear trend and white noise:
@@ -53,7 +53,8 @@ grid()
 n <- length(Delta_y)
 sample_mean <- sum(Delta_y)/n
 sample_var <- sum((Delta_y - sample_mean)^2)/n
-sample_gamma_1 <- sum((Delta_y[-1] - sample_mean)*(Delta_y[-n] - sample_mean))/n
+sample_gamma_1 <- sum((Delta_y[-1] - sample_mean)*
+                        (Delta_y[-n] - sample_mean))/n
 sample_rho_1 <- sample_gamma_1/sample_var
 # Plot the ACF:
 acf(Delta_y)

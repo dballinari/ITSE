@@ -36,3 +36,6 @@ grid()
 
 # Get the data from the x_ts time series starting July 2012:
 window(x_ts, start=c(2012, 7))
+
+
+
